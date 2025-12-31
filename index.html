@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHOR'S | Modern Men's Style</title>
+    <meta name="description" content="Elevate your style with curated lookbooks and outfit breakdowns.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="#" class="logo">CHOR'S</a>
+            <nav class="nav">
+                <a href="#lookbook" class="nav-link">Lookbook</a>
+                <a href="#about" class="nav-link">Philosophy</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-bg">
+                <!-- Using look4 as hero background, subtly blurred or dimmed -->
+                <img src="assets/images/look4.jpg" alt="Hero Background">
+            </div>
+            <div class="container hero-content">
+                <h1 class="hero-title">Elevate Your Presence</h1>
+                <p class="hero-subtitle">Curated essentials for the modern man. Simple, sophisticated, significant.</p>
+                <a href="#lookbook" class="btn btn-primary">View Collection</a>
+            </div>
+        </section>
+
+        <section id="about" class="section about">
+            <div class="container">
+                <div class="about-content">
+                    <h2>The Art of Undressing</h2>
+                    <p>Style isn't just about what you wear—it's about how you assemble it. We break down the complexity of fashion into essential elements, guiding you to build a wardrobe that speaks before you do.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="lookbook" class="section lookbook">
+            <div class="container">
+                <h2 class="section-title">The Collection</h2>
+                <div class="lookbook-grid">
+                    <!-- Grid Items -->
+                    <article class="look-card" onclick="openLook('assets/images/look1.jpg', 'Urban Minimalist', 'Black Shirt, Shorts, Leather Accessories')">
+                        <div class="look-image">
+                            <img src="assets/images/look1.jpg" alt="Urban Minimalist">
+                        </div>
+                        <div class="look-info">
+                            <h3>No. 01 — Urban Minimalist</h3>
+                            <p>Monochrome mastery with layered textures.</p>
+                        </div>
+                    </article>
+
+                    <article class="look-card" onclick="openLook('assets/images/look2.jpg', 'Soft Tailoring', 'Linen Jacket, Shorts, Sports Shoes')">
+                        <div class="look-image">
+                            <img src="assets/images/look2.jpg" alt="Soft Tailoring">
+                        </div>
+                        <div class="look-info">
+                            <h3>No. 02 — Soft Tailoring</h3>
+                            <p>Relaxed elegance for the weekend.</p>
+                        </div>
+                    </article>
+
+                    <article class="look-card" onclick="openLook('assets/images/look3.jpg', 'Modern Prep', 'Checkered Hood, Wide Trousers')">
+                        <div class="look-image">
+                            <img src="assets/images/look3.jpg" alt="Modern Prep">
+                        </div>
+                        <div class="look-info">
+                            <h3>No. 03 — Modern Prep</h3>
+                            <p>Reinventing classic silhouettes.</p>
+                        </div>
+                    </article>
+
+                    <article class="look-card" onclick="openLook('assets/images/look4.jpg', 'Bohemian Chic', 'Beige Shirt, Wide Pants, Woven Bag')">
+                        <div class="look-image">
+                            <img src="assets/images/look4.jpg" alt="Bohemian Chic">
+                        </div>
+                        <div class="look-info">
+                            <h3>No. 04 — Bohemian Chic</h3>
+                            <p>Fluid fabrics and earthy tones.</p>
+                        </div>
+                    </article>
+                    
+                    <article class="look-card" onclick="openLook('assets/images/look5.jpg', 'Artisan Blue', 'Patterned Shirt, Black Trousers')">
+                        <div class="look-image">
+                            <img src="assets/images/look5.jpg" alt="Artisan Blue">
+                        </div>
+                        <div class="look-info">
+                            <h3>No. 05 — Artisan Blue</h3>
+                            <p>Statement pieces grounded by basics.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 CHOR'S STYLE. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeLook()">&times;</span>
+        <div class="modal-content">
+            <img id="modalImg" src="" alt="Look Detail">
+            <div class="modal-details">
+                <h3 id="modalTitle"></h3>
+                <p id="modalDesc"></p>
+                <div class="modal-tips">
+                    <h4>Style Tip</h4>
+                    <p>Notice the proportions. When wearing wide trousers, keep the top structured or tucked to maintain balance.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
